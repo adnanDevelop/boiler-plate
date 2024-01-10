@@ -1,0 +1,18 @@
+/* CUSTOM SCROLL BAR SECTION */
+::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 0.2rem solid var(--white);
+    background: var(--yellow);
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #aa6817;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--white);
+}

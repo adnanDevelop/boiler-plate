@@ -1,0 +1,59 @@
+How to create slices:
+import { createSlice } from "@reduxjs/toolkit";
+
+const userSlice = createSlice({
+	name : 'allUsers',
+	initialState : [],
+	reducers : {
+		adduser(){},	
+	},
+})
+
+export const {adduser} = userSlice.actions;
+export default userSlice.reducer;
+
+
+configure store:
+import { configureStore } from "@reduxjs/toolkit";
+import userSlice from "./slices/userSlice";
+
+const store = configureStore ({
+	reducer : userSlice,
+})
+
+export default store;
+
+Connect redux with react
+import { Provider } from 'react-redux';
+import store from './store/store';
+
+<Provider store={store}></Provider>
+
+
+how to get data from redux toolkit in any component:
+import { useSelector } from "react-redux";
+const data = useSelector((state) => state.user);
+
+How to pass data to redux toolkit:
+import { useDispatch } from "react-redux";
+const dispatch = useDispatch()
+
+first call a function like onClick
+and then use
+dispatch (addUser()) function that we created in slice reducers like addUsers(){}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

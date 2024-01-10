@@ -1,0 +1,41 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation, Autoplay } from "swiper/modules";
+
+
+  <Swiper
+            slidesPerView={4}
+            spaceBetween={20}
+            navigation={true}
+	    grabCursor={true}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              572: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+              },
+            }}
+            autoplay={{
+              delay: 1500,
+              disableOnInteraction: false,
+            }}
+            modules={[Navigation, Autoplay]}
+            className="mySwiper"
+          >
+            {portfolioContent.map((element, index) => {
+              return (
+                <SwiperSlide key={index} className="my-5">
+                 
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>

@@ -1,0 +1,29 @@
+import { BrowserRouter, Routes ,  Route } from "react-router-dom";
+import Home from './component/pages/Home';
+import About from './component/pages/About';
+import Property from './component/pages/Property';
+import Blog from './component/pages/Blog';
+import Contact from './component/pages/Contact';
+import Navbar from './component/NavFooter/Navbar';
+import Footer from './component/NavFooter/Footer';
+
+function App() {
+  return (
+    <>
+     <BrowserRouter>
+    <Navbar />
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/about' element={<About/>} />
+        <Route path='/property' element={<Property/>} />
+        <Route path='/blog' element={<Blog/>} />
+        <Route path='/contact' element={<Contact/>} />
+      </Routes>
+      <Footer/>
+    </BrowserRouter>
+    
+    </>
+  )
+}
+
+export default App;

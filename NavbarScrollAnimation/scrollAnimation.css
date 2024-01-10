@@ -1,0 +1,29 @@
+const [scrollAnimation, setScrollAnimation] = useState(false);
+
+/* class for animation is [nav-scroll] */
+
+
+window.addEventListener("scroll", () => {
+    window.scrollY > 100 ? setScrollAnimation(true) : setScrollAnimation(false);
+  });
+
+
+.nav-scroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    animation: scroll 0.5s ease-in ;
+    box-shadow: 0px 0px 5px #000, -2px -2px 5px #000;
+    transition: var(--transition);
+}
+
+@keyframes scroll {
+    0% {
+    transform: translateY(-90px);
+  }
+  100%{
+      transform: translateY(0px);
+    }
+ }
